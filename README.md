@@ -1,1 +1,2 @@
-# Randomazer
+# randomizer
+Машуков

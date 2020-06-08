@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Рандомное число</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<style>
+table {
+    border-collapse: collapse;
+}
+
+table, td, th {
+    border: 1px solid #999;
+    padding: 5px;
+}
+</style>
+<body>
+<div></div>
+<form method="numerics">
+    <input type="text" name="range1" placeholder="От"/>
+    <input type="text" name="range2" placeholder="До"/>
+    <button type="submit">Добавить</button>
+</form>
+<table>
+    <h2>Список сгенерированных чисел</h2>
+    <tr>
+        <th>Id</th>
+        <th>Число</th>
+        <th>Диапазон</th>
+    </tr>
+    {{#numerics}}
+        <<tr>
+            <th>{{id}}</th>
+            <th>{{value}}</th>
+            <th>{{range}}</th>
+
+        </tr>
+    {{/numerics}}
+</table>
+<form action="main" target="_blank">
+    <button type="вернуться">Монетка</button>
+</form>
+</body>
+</html>
