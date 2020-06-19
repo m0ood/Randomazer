@@ -1,11 +1,19 @@
 <html>
-
+<head>
+    <title>Меню</title>
+</head>
 <body>
-<form action="greeting" target="_blank">
+<form action="/random_number" target="post">
+    <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
     <button type="submit">Рандомное число</button>
 </form>
-<form action="coin" target="_blank">
+<form action="/coin" target="post">
+    <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
     <button type="submit">Монетка</button>
+</form>
+<form action="/logout" method="post">
+    <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+    <input type="submit" value="Sign Out"/>
 </form>
 </body>
 </html>

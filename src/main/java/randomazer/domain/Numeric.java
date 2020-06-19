@@ -7,28 +7,17 @@ import javax.persistence.*;
 public class Numeric {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    @Column(name="id")
-    private Integer id;
-    @Column(name="value")
+    private Long id;
+    @Column(name="numbers_value")
     private Integer value;
-    @Column(name="range")
+    @Column(name="numbers_range")
     private String range;
 
-
-    public Numeric() {
-    }
-
-    public Numeric(int value ,String range) {
-        this.value = value;
-        this.range = range;
-    }
-
-
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public   void setId(Integer id) {
+    public   void setId(Long id) {
         this.id = id;
     }
 

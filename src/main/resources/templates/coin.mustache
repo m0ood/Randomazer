@@ -5,12 +5,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-<th>{{photo}}</th>
+<th>{{coin}}</th>
 <form method="numerics">
+    <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
     <button type="submit">Сгенерировать</button>
 </form>
-<form action="main" target="_blank">
-    <button type="вернуться">Монетка</button>
+<form action="/main" target="post">
+    <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+    <button type="вернуться">Назад</button>
 </form>
 </body>
 </html>

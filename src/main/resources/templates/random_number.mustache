@@ -15,12 +15,13 @@ table, td, th {
 }
 </style>
 <body>
-<div></div>
-<form method="numerics">
-    <input type="text" name="range1" placeholder="От"/>
-    <input type="text" name="range2" placeholder="До"/>
-    <button type="submit">Добавить</button>
+<form method="post">
+    <input type="number" name="range1" placeholder="От" required/>
+    <input type="number" name="range2" placeholder="До"required />
+    <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+    <button type="submit">Сгенерировать</button>
 </form>
+<th>{{numeric}}</th>
 <table>
     <h2>Список сгенерированных чисел</h2>
     <tr>
@@ -33,12 +34,12 @@ table, td, th {
             <th>{{id}}</th>
             <th>{{value}}</th>
             <th>{{range}}</th>
-
         </tr>
     {{/numerics}}
 </table>
-<form action="main" target="_blank">
-    <button type="вернуться">Монетка</button>
+<form action="/ main" target="post">
+    <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+    <button type="вернуться">Назад</button>
 </form>
 </body>
 </html>
