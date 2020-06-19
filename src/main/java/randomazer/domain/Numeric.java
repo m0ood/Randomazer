@@ -12,6 +12,17 @@ public class Numeric {
     private Integer value;
     @Column(name="numbers_range")
     private String range;
+    @ManyToOne (fetch = FetchType.EAGER)
+    @JoinColumn(name = "user_id")
+    private User author;
+
+    public User getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(User author) {
+        this.author = author;
+    }
 
     public Long getId() {
         return id;
